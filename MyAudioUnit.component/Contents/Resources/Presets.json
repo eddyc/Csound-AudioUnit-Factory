@@ -1,0 +1,16 @@
+ [
+  {
+  "name":"Short Attack Short Release",
+  "parameters":{
+  "Attack":0.001,
+  "Release":0.001
+  }
+  },
+  {
+  "name":"Long Attack Long Release",
+  "parameters":{
+  "Attack":1,
+  "Release":2
+  }
+  }
+  ]
