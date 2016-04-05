@@ -1,0 +1,21 @@
+{
+  "name": "CsoundAUFactory",
+  "homepage": "https://github.com/eddyc/Csound-AudioUnit-Factory",
+  "authors": [
+    "Edward Costello <phasereset@gmail.com>"
+  ],
+  "description": "Create AudioUnit plugins using a website",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.4.0"
+  }
+}

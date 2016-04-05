@@ -1,9 +1,16 @@
 <html>
-    <body>
-        <input type="range" id="Attack">Attack</input>
-        <br>
-        <input type="range" id="Release">Release</input>
-        
-        <script src="main.js"></script>
-    </body>
+<body>
+
+
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="Components/CsoundUI/csound-ui.html"></link>
+    <csound-ui>
+
+        <csound-group>
+            <csound-slider diameter="100" channel="Attack" minimum="0.001" maximum="1" current="0.5" step="0.001"></csound-slider>
+            <csound-slider diameter="100" channel="Release" minimum="0.001" maximum="3" current="0.5" step="0.001"></csound-slider>
+            <csound-slider diameter="100" channel="Cutoff" minimum="0.001" maximum="1" current="0.5" step="0.001"></csound-slider>
+        </csound-group>
+</csound-ui>
+</body>
 </html>

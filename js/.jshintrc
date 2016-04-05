@@ -1,0 +1,38 @@
+{
+    "esnext":true,
+    "newcap":false,
+    "unused":true,
+    "undef":true,
+    "varstmt":true,
+    "browser":true,
+    "devel":true,
+
+    "globals": {
+        "ResizablePanes": true,
+        "TimeAxis": true,
+        "FrequencyAxis": true,
+        "NoteObject": true,
+        "NoteLayer": true,
+        "PlayheadLayer": true,
+        "AudioContext": true,
+        "TimeSignature": true,
+        "TimeRange": true,
+        "Interaction": true,
+        "$": false,
+        "jQuery": false,
+        "Polymer": true,
+        "setSVGElement": true,
+        "createSVGElement": true,
+        "self": true,
+        "postMessage": true,
+        "Events": true,
+        "csound":true,
+        "Scheduler":true,
+        "TestScheduler":true,
+        "Timer":true,
+        "Clip":true,
+        "NewClip":true,
+        "ClipScheduler":true,
+        "EventList":true
+    }
+}

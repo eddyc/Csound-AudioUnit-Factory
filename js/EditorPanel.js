@@ -8,9 +8,9 @@ var EditorPanel = function() {
     var csoundEditorDiv = document.createElement("div");
     csoundEditorDiv.className = "AceEditor";
     var csoundEditButton =  document.getElementById("CsoundEditButton");
-    var javascriptEditorDiv = document.createElement("div");
-    javascriptEditorDiv.className = "AceEditor";
-    var javascriptEditButton =  document.getElementById("JavascriptEditButton");
+    // var javascriptEditorDiv = document.createElement("div");
+    // javascriptEditorDiv.className = "AceEditor";
+    // var javascriptEditButton =  document.getElementById("JavascriptEditButton");
 
     var csoundController = new CsoundController();
 
@@ -40,24 +40,24 @@ var EditorPanel = function() {
         panelDiv.appendChild(csoundEditorDiv);
     };
 
-    javascriptEditButton.onchange = function() {
+    // javascriptEditButton.onchange = function() {
+    //
+    //     panelDiv.innerHTML = "";
+    //     panelDiv.appendChild(javascriptEditorDiv);
+    // };
 
-        panelDiv.innerHTML = "";
-        panelDiv.appendChild(javascriptEditorDiv);
-    };
-
-    var htmlEditor, csoundEditor; 
+    var htmlEditor, csoundEditor;
 
     var fileReader = new FileReader();
 
     var previewPanel = new PreviewPanel(this);
 
     fileReader.getFileFromServer("AudioUnitAssets/index.html", function(result) {
-
+    //
         htmlEditor = new Editor(htmlEditorDiv, result, function () {
-
-            previewPanel.setHTML(htmlEditor.getValue(), javascriptEditor.getValue());
-
+    //
+             previewPanel.setHTML(htmlEditor.getValue(), "");
+    //
         });
         htmlEditor.setMode("html");
     });
@@ -69,20 +69,21 @@ var EditorPanel = function() {
             csoundController.evaluateInstrument(instrumentString);
 
         });
+        csoundEditor.setMode("csound");
         csoundController.setCSD(result);
     });
 
 
     fileReader.getFileFromServer("AudioUnitAssets/main.js", function(result) {
-
-        javascriptEditor = new Editor(javascriptEditorDiv, result, previewPanel.setJavascript);         
-        javascriptEditor.setMode("javascript");
+    //     //
+    //     // javascriptEditor = new Editor(javascriptEditorDiv, result, previewPanel.setJavascript);
+    //     // javascriptEditor.setMode("javascript");
         previewPanel.setHTML(htmlEditor.getValue(), result);
-
+    //
     });
 
     this.getDocumentValues = function() {
 
-        return {html:htmlEditor.getValue(), javascript:javascriptEditor.getValue(), csound:csoundEditor.getValue()};
+        return {html:htmlEditor.getValue(), csound:csoundEditor.getValue()};
     }
 }

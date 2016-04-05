@@ -6,8 +6,12 @@ var Editor = function(parentElement, fileText, evaluateCallback) {
     //   editor.$blockScrolling = Infinity;
     editor.setOption("highlightActiveLine", false)
     editor.setOption("cursorStyle", "smooth")
+    editor.setOptions({
+        fontFamily: "Menlo",
+        fontSize: "13pt",
+    });
+    editor.setTheme("ace/theme/eclipse");
     editor.setShowPrintMargin(false);
-
     var aceRange = ace.require('ace/range').Range;
     var marker;
 
@@ -41,7 +45,7 @@ var Editor = function(parentElement, fileText, evaluateCallback) {
             var range = new aceRange(currentInstrument.startline, 0, currentInstrument.endline, 0);
             marker = editor.session.addMarker(range, "ace_active-line", "fullLine");
             var markerLayers = document.getElementsByClassName('ace_active-line');
-            var activeLineDiv = markerLayers[0];    
+            var activeLineDiv = markerLayers[0];
 
             evaluateCallback(currentInstrument.text);
         },
@@ -50,7 +54,7 @@ var Editor = function(parentElement, fileText, evaluateCallback) {
 
     this.setMode = function(mode) {
 
-        editor.getSession().setMode("ace/mode/" + mode); 
+        editor.getSession().setMode("ace/mode/" + mode);
     };
 
     this.getValue = function() {
@@ -58,4 +62,3 @@ var Editor = function(parentElement, fileText, evaluateCallback) {
         return editor.getValue();
     }
 };
-

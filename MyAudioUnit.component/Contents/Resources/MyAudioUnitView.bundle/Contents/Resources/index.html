@@ -1,46 +1,15 @@
 <html>
-    <body>
-        <input type="range" id="Attack">Attack</input>
-        <br>
-        <input type="range" id="Release">Release</input>
-        <script>
-            
-            function configureSlider(id, minimum, maximum, step) {
-                
-                var slider = document.getElementById(id);
-                slider.min = minimum;
-                slider.max = maximum;
-                slider.step = step;
-                return slider;
-            }
-        
-        var attackSlider = configureSlider("Attack", 0.001, 1, 1/100);
-        
-        attackSlider.oninput = function() {
-            
-            AudioUnit.setParameter("Attack", attackSlider.value);
-        }
-        
-        function setAttack(inputValue) {
-            
-            attackSlider.value = inputValue;
-        }
-        
-        AudioUnit.getParameterCallback("Attack", setAttack);
-        
-        var releaseSlider = configureSlider("Release", 0.001, 5, 1/100);
-        
-        releaseSlider.oninput = function() {
-            
-            AudioUnit.setParameter("Release", releaseSlider.value);
-        }
-        
-        function setRelease(inputValue) {
-            
-            releaseSlider.value = inputValue;
-        }
-        
-        AudioUnit.getParameterCallback("Release", setRelease);
-            </script>
-    </body>
+<body>
+
+
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="Components/CsoundUI/csound-ui.html"></link>
+    <csound-ui>
+
+        <csound-group>
+            <csound-slider diameter="100" channel="Attack" minimum="0.001" maximum="1" current="0.5" step="0.001"></csound-slider>
+            <csound-slider diameter="100" channel="Release" minimum="0.001" maximum="1" current="0.5" step="0.001"></csound-slider>
+        </csound-group>
+</csound-ui>
+</body>
 </html>

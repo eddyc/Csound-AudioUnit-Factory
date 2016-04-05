@@ -2,7 +2,7 @@
     "ViewBundleID":"MyAudioUnitView",
     "ViewType":"HTML",
     "ViewFileName":"index",
-    "ViewWidth":"340",
-    "ViewHeight":"150",
-    "csd":"main"
+    "ViewWidth":"500",
+    "ViewHeight":"350",
+    "csd":"Test_CsoundAUSynth"
 }

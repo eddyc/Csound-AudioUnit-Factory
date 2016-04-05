@@ -1,0 +1,31 @@
+{
+    "esnext":true,
+    "newcap":false,
+    "unused":true,
+    "undef":true,
+    "varstmt":false,
+    "browser":true,
+    "devel":true,
+
+    "globals": {
+        "$": false,
+        "jQuery": false,
+        "StateGraph":false,
+        "Polymer": true,
+        "KeyboardOctave":true,
+        "setSVGElement": true,
+        "createSVGElement": true,
+        "self": true,
+        "AudioUnit": true,
+        "postMessage": true,
+        "Events": true,
+        "csound":true,
+        "Scheduler":true,
+        "TestScheduler":true,
+        "Timer":true,
+        "Clip":true,
+        "NewClip":true,
+        "ClipScheduler":true,
+        "EventList":true
+    }
+}

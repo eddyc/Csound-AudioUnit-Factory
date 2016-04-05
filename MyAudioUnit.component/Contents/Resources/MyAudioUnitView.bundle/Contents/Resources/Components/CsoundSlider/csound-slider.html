@@ -1,0 +1,21 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html"></link>
+<dom-module id="csound-slider">
+    <template>
+
+        <!-- <input type="range" id="{{channel}}">
+        {{channel}}
+    </input> -->
+
+    <div id="Container">
+        <svg id="SVGParent" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100">
+            <text id="SVGText"  text-anchor="middle"></text>
+        </svg>
+        <div style="text-align:center; font-family:sans-serif; top:10px"></br>
+            {{channel}}
+        </div>
+    </div>
+</template>
+
+<script src="StateGraph.js"></script>
+<script src="CsoundSlider.js"></script>
+</dom-module>

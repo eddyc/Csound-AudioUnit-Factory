@@ -6,17 +6,21 @@
 	<array>
 		<dict>
 			<key>description</key>
-			<string>My Csound AudioUnit</string>
+			<string>Csound AudioUnit</string>
 			<key>factoryFunction</key>
 			<string>CsoundAUFactory</string>
 			<key>manufacturer</key>
-			<string>CSND</string>
+			<string>csnd</string>
 			<key>name</key>
-			<string>MyAudioUnit</string>
+			<string>Csound AudioUnit Synthesiser</string>
 			<key>sandboxSafe</key>
-			<false/>
+			<true/>
 			<key>subtype</key>
-			<string>CSND</string>
+			<string>csnd</string>
+			<key>tags</key>
+			<array>
+				<string>Synthesizer</string>
+			</array>
 			<key>type</key>
 			<string>aumu</string>
 			<key>version</key>
@@ -24,40 +28,44 @@
 		</dict>
 	</array>
 	<key>BuildMachineOSBuild</key>
-	<string>14F27</string>
+	<string>15D21</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
-	<string>MyAudioUnit</string>
+	<string>CsoundAUSynthHTML</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.csound.MyAudioUnit</string>
+	<string>com.Csound.CsoundAUSynthHTML</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>MyAudioUnit</string>
+	<string>CsoundAUSynthHTML</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>6E35b</string>
+	<string>7C1002</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>14D125</string>
+	<string>15C43</string>
 	<key>DTSDKName</key>
-	<string>macosx10.10</string>
+	<string>macosx10.11</string>
 	<key>DTXcode</key>
-	<string>0640</string>
+	<string>0721</string>
 	<key>DTXcodeBuild</key>
-	<string>6E35b</string>
+	<string>7C1002</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2015 Csound. All rights reserved.</string>
+	<string>Copyright © 2016 Csound. All rights reserved.</string>
 </dict>
 </plist>

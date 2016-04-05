@@ -1,0 +1,38 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.EditorPanel {
+
+    width:550px;
+    height:500px;
+    border:1px solid #ADADAD;
+}
+
+.AceEditor {
+
+    width:auto;
+    height:498px;
+}
+
+
+.PreviewPanel {
+
+    width:550px;
+    height:500px;
+}
+.PreviewIFrame {
+
+    width:550px;
+    height:225px;
+    border:1px solid #ADADAD;
+}
+
+#PresetsPanel {
+
+    width:550px;
+    height:225px;
+    /*border:1px solid #ADADAD;*/
+    border-radius:5px;
+    overflow:scroll;
+}

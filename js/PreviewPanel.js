@@ -1,5 +1,6 @@
 var PreviewPanel = function(editorPanel) {
 
+    "use strict";
     var iFrameElement = document.getElementById('PreviewIFrame');
     var addPresetInput = document.getElementById('AddPresetInput');
     addPresetInput.onchange = function (event) {
@@ -8,7 +9,7 @@ var PreviewPanel = function(editorPanel) {
         addPreset(addPresetInput.value);
     };
     var iFrameDocument = iFrameElement.contentWindow.document;
-    var fileReader = new FileReader(); 
+    var fileReader = new FileReader();
     var registeredParameters = [];
 
     this.setHTML = function(htmlString, javascriptString) {
@@ -132,10 +133,9 @@ var PreviewPanel = function(editorPanel) {
         var documents = editorPanel.getDocumentValues();
         var htmlString = documents.html;
         var csoundString = documents.csound;
-        var javascriptString = documents.javascript;
         var presetsString = JSON.stringify(presets);
         var parametersString = JSON.stringify(parameters);
-        auBuilder.buildAudioUnit(htmlString, javascriptString, csoundString, parametersString, presetsString);
+        auBuilder.buildAudioUnit(htmlString, csoundString, parametersString, presetsString);
         console.log("saving");
     }
 };

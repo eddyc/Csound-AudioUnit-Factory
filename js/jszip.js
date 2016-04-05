@@ -4418,7 +4418,7 @@ function fill_window(s) {
  * This function does not insert new strings in the dictionary since
  * uncompressible data is probably not useful. This function is used
  * only for the level=0 compression option.
- * NOTE: this function should be optimized to avoid extra copying from
+ * NOTE:20 this function should be optimized to avoid extra copying from
  * window to pending_buf.
  */
 function deflate_stored(s, flush) {
