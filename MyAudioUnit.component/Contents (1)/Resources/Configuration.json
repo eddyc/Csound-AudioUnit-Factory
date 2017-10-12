@@ -1,5 +1,5 @@
 {
-    "ViewBundleID":"CsoundAUSynthHTMLView",
+    "ViewBundleID":"MyAudioUnitView",
     "ViewType":"HTML",
     "ViewFileName":"index",
     "ViewWidth":"500",

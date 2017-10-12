@@ -1,0 +1,14 @@
+[
+    {
+        "name":"Attack",
+        "minValue": 0.00001,
+        "maxValue": 1,
+        "defaultValue":0.5
+    },
+    {
+        "name":"Release",
+        "minValue": 0.00001,
+        "maxValue": 1,
+        "defaultValue":0.5
+    }
+]
